@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     const menu = document.querySelector(".menu");
-    const openBtn = document.querySelectorAll(".humberger")[0]; // Menu icon
-    const closeBtn = document.querySelectorAll(".humberger")[1]; // Arrow icon
+    const openBtn = document.getElementById('openSlide') // Menu icon
+    const closeBtn = document.getElementById('closeSlide') // Arrow icon
 
     if (openBtn) {
         openBtn.addEventListener("click", (e) => {
             e.preventDefault();
+            menu.style.transition = "left 0.7s ease"
             menu.style.left = "0";
         });
     }
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (closeBtn) {
         closeBtn.addEventListener("click", (e) => {
             e.preventDefault();
+            menu.style.transition = "left 0.7s ease"
             menu.style.left = "-100%";
         });
     }
