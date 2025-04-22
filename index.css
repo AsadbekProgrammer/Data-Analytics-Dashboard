@@ -1,0 +1,141 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background:url('bg.jpg');
+    padding:1.5em 2.625em;
+}
+
+header {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:6.75em;
+}
+
+.logo {
+    color:#2D7DFF;
+    font-size:1.5rem;
+    font-weight: bolder;
+}
+
+.logo, h1, .main-link {
+    text-transform: uppercase;
+}
+
+.menu {
+    position: absolute;
+    top:0;
+    left:-100%;
+    width:15em;
+    background-color: #2C2931;
+    height:100vh;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding:0;
+}
+
+ul li {
+    width:100%;
+    padding: .625em 2.81em;
+}
+
+ul li:hover {
+    background-color:#413E47;
+}
+
+ul a {
+    color:#fff;
+    text-transform: uppercase;
+}
+
+.active {
+    font-weight: bold;
+    background-color: #4497FF;
+}
+
+.arrow {
+  transform: scaleX(-1);
+}
+
+main {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height:100vh;
+    gap:2.5em;
+}
+
+h1, h2 {
+    margin:0;
+}
+
+h1 {
+    color:#fff;
+    font-size:3rem;
+}
+
+h2 {
+    color:#847D93;
+    font-size:2.125rem;
+    font-weight: lighter;
+}
+
+.link {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    width:fit-content;
+    gap:1rem;
+    line-height: 111.4%;
+    padding:1.25em 1.5em;
+    border:1px solid #4D4D4D;
+}
+
+.main-link {
+    font-weight: bold;
+    color:#fff;
+}
+
+.main-link:hover{
+    background-color:#00A3FF;
+}
+
+.main-link, a {
+    text-decoration: none;
+}
+
+ @media (min-width:1283px) {
+    body {
+       display:grid;
+       grid-template-columns:0.20fr 1fr;
+    }
+    
+    .humberger {
+        display: none;
+    }
+    
+    .container {
+        padding: 2.5em 6.375em;
+    }
+    
+    .menu {
+        position: relative;
+        left:0 !important;
+        padding-top:2.5em;
+        width:18em;
+        height: 100%;
+        min-height: fit-content;
+    }
+} 
